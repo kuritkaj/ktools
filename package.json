@@ -1,7 +1,7 @@
 {
   "name": "@ktools/cli",
   "version": "0.0.1",
-  "description": "oclif example Hello World CLI",
+  "description": "Development workflow automation tool",
   "author": "Jakub Kuřitka",
   "type": "module",
   "bin": {
@@ -14,10 +14,10 @@
       ]
     }
   },
-  "homepage": "https://github.com/kuritkaj/hello-world",
+  "homepage": "https://github.com/kuritkaj/ktools",
   "license": "MIT",
   "main": "dist/index.js",
-  "repository": "kuritkaj/hello-world",
+  "repository": "kuritkaj/ktools",
   "files": [
     "/bin",
     "/dist",
@@ -84,9 +84,9 @@
   "engines": {
     "node": ">=18.0.0"
   },
-  "bugs": "https://github.com/kuritkaj/hello-world/issues",
+  "bugs": "https://github.com/kuritkaj/ktools/issues",
   "keywords": [
-    "oclif"
+    "oclif", "ktools", "build", "lint", "format", "release", "test", "tools"
   ],
   "types": "dist/index.d.ts"
 }
