@@ -1,6 +1,6 @@
 {
   "name": "@kuritkaj/ktools",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Development workflow automation tool",
   "author": "Jakub Kuřitka",
   "type": "module",
