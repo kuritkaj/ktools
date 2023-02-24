@@ -4,6 +4,11 @@ import { WorkflowStage } from "../../lib/workflow/WorkflowStage.js";
 
 export class Release extends WorkflowStage {
   run(): TaskList {
-    return [Context.program.getRunNpmToolTask("semantic-release", ["--debug", "--no-ci"])];
+    return [
+      Context.program.getRunNpmToolTask("semantic-release", [
+        "--debug",
+        "--no-ci",
+      ]),
+    ];
   }
 }
