@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/kuritkaj/ktools/compare/v1.1.0...v1.1.1) (2023-02-24)
+
+
+### Bug Fixes
+
+* improve npm tools search ([fa09a69](https://github.com/kuritkaj/ktools/commit/fa09a69296e5121f1b7a5775d052aa9623660375))
+
 # [1.1.0](https://github.com/kuritkaj/ktools/compare/v1.0.0...v1.1.0) (2023-02-24)
 
 # 1.0.0 (2023-02-24)
