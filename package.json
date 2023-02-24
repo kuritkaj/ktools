@@ -19,7 +19,7 @@
   "main": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "ssh://git@github.com/kuritkaj/ktools.git"
+    "url": "git+ssh://git@github.com/kuritkaj/ktools.git"
   },
   "files": [
     "/bin",
