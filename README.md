@@ -20,7 +20,7 @@ $ npm install -g @kuritkaj/ktools
 $ ktools COMMAND
 running command...
 $ ktools (--version)
-@kuritkaj/ktools/1.1.1 linux-x64 node-v19.6.0
+@kuritkaj/ktools/1.2.0 linux-x64 node-v19.6.0
 $ ktools --help [COMMAND]
 USAGE
   $ ktools COMMAND
@@ -65,7 +65,7 @@ EXAMPLES
   $ ktools build
 ```
 
-_See code: [dist/commands/build/index.js](https://github.com/kuritkaj/ktools/blob/v1.1.1/dist/commands/build/index.js)_
+_See code: [dist/commands/build/index.js](https://github.com/kuritkaj/ktools/blob/v1.2.0/dist/commands/build/index.js)_
 
 ## `ktools dev`
 
@@ -86,7 +86,7 @@ EXAMPLES
   $ ktools dev
 ```
 
-_See code: [dist/commands/dev/index.js](https://github.com/kuritkaj/ktools/blob/v1.1.1/dist/commands/dev/index.js)_
+_See code: [dist/commands/dev/index.js](https://github.com/kuritkaj/ktools/blob/v1.2.0/dist/commands/dev/index.js)_
 
 ## `ktools format`
 
@@ -107,7 +107,7 @@ EXAMPLES
   $ ktools format
 ```
 
-_See code: [dist/commands/format/index.js](https://github.com/kuritkaj/ktools/blob/v1.1.1/dist/commands/format/index.js)_
+_See code: [dist/commands/format/index.js](https://github.com/kuritkaj/ktools/blob/v1.2.0/dist/commands/format/index.js)_
 
 ## `ktools help [COMMANDS]`
 
@@ -148,7 +148,7 @@ EXAMPLES
   $ ktools lint
 ```
 
-_See code: [dist/commands/lint/index.js](https://github.com/kuritkaj/ktools/blob/v1.1.1/dist/commands/lint/index.js)_
+_See code: [dist/commands/lint/index.js](https://github.com/kuritkaj/ktools/blob/v1.2.0/dist/commands/lint/index.js)_
 
 ## `ktools plugins`
 
@@ -402,7 +402,7 @@ EXAMPLES
   $ ktools preview
 ```
 
-_See code: [dist/commands/preview/index.js](https://github.com/kuritkaj/ktools/blob/v1.1.1/dist/commands/preview/index.js)_
+_See code: [dist/commands/preview/index.js](https://github.com/kuritkaj/ktools/blob/v1.2.0/dist/commands/preview/index.js)_
 
 ## `ktools release`
 
@@ -423,5 +423,5 @@ EXAMPLES
   $ ktools release
 ```
 
-_See code: [dist/commands/release/index.js](https://github.com/kuritkaj/ktools/blob/v1.1.1/dist/commands/release/index.js)_
+_See code: [dist/commands/release/index.js](https://github.com/kuritkaj/ktools/blob/v1.2.0/dist/commands/release/index.js)_
 <!-- commandsstop -->
