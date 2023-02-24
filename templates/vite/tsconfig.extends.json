@@ -1,0 +1,3 @@
+{
+    "extends": "@ktools/cli/templates/vite/tsconfig.json"
+}
