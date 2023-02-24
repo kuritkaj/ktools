@@ -2,7 +2,7 @@ import { execa } from "execa";
 import { NpmProvider } from "../context/NpmProvider.js";
 import { TaskRunner } from "./task/TaskRunner.js";
 import path from "node:path";
-import { Task } from "./task/Task.js";
+import { Task, TaskContext } from "./task/Task.js";
 
 export type ProgramArgs = readonly string[];
 
@@ -16,7 +16,10 @@ export class ProgramRunner {
     await this.taskRunner.run([this.getRunTask(processName, args)]);
   }
 
-  getRunTask(processName: string, args: ProgramArgs): Task {
+  getRunTask<Ctx = TaskContext>(
+    processName: string,
+    args: ProgramArgs,
+  ): Task<Ctx> {
     return {
       title: this.getTaskTitle(processName, args),
       async task(ctx, task) {
@@ -31,18 +34,45 @@ export class ProgramRunner {
 
         await t;
       },
+      options: {
+        persistentOutput: true,
+      },
     };
   }
 
-  async runNpmTool(tool: string, args: ProgramArgs): Promise<void> {
-    const bin = this.npmProvider.getNpmToolLocation(tool);
-
-    return await this.run(bin, args);
-  }
   getRunNpmToolTask(tool: string, args: ProgramArgs): Task {
-    const bin = this.npmProvider.getNpmToolLocation(tool);
+    interface RunNpmToolTaskCtx {
+      toolPath: string;
+    }
 
-    return this.getRunTask(bin, args);
+    return {
+      title: "NPM Tool",
+      task: (ctx, task) =>
+        task.newListr<RunNpmToolTaskCtx>([
+          {
+            title: "Find tool location",
+            task: (ctx, t) => {
+              ctx.toolPath = this.npmProvider.getNpmToolLocation(tool);
+              t.title = `${t.title}: ${ctx.toolPath}`;
+            },
+          },
+          {
+            task: (ctx, subTask) =>
+              subTask.newListr([
+                {
+                  title: "Run tool",
+                  enabled: () => !!ctx.toolPath,
+                  ...this.getRunTask(ctx.toolPath, args),
+                },
+                {
+                  title: "Run tool with NPX",
+                  enabled: () => !ctx.toolPath,
+                  ...this.getRunTask("npx", [tool, ...args]),
+                },
+              ]),
+          },
+        ]),
+    };
   }
 
   protected getTaskTitle(processName: string, args: ProgramArgs): string {

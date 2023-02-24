@@ -9,7 +9,10 @@ export class TaskRunner {
       rendererOptions: {
         collapse: false,
         showSubtasks: true,
-        formatOutput: "wrap",
+        clearOutput: false,
+        collapseErrors: false,
+        persistentOutput: true,
+        removeEmptyLines: true,
       },
     }).run(ctx);
   }
