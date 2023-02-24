@@ -5,7 +5,7 @@
   "author": "Jakub Kuřitka",
   "type": "module",
   "bin": {
-    "ktools": "./bin/run.js"
+    "ktools": "bin/run.js"
   },
   "typesVersions": {
     "*": {
@@ -17,7 +17,10 @@
   "homepage": "https://github.com/kuritkaj/ktools",
   "license": "MIT",
   "main": "dist/index.js",
-  "repository": "kuritkaj/ktools",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kuritkaj/ktools.git"
+  },
   "files": [
     "/bin",
     "/dist",
@@ -66,8 +69,7 @@
       "@oclif/plugin-not-found"
     ],
     "topicSeparator": " ",
-    "topics": {
-    }
+    "topics": {}
   },
   "scripts": {
     "build": "shx rm -rf dist && tsc -b",
@@ -84,9 +86,24 @@
   "engines": {
     "node": ">=18.0.0"
   },
-  "bugs": "https://github.com/kuritkaj/ktools/issues",
+  "bugs": {
+    "url": "https://github.com/kuritkaj/ktools/issues"
+  },
   "keywords": [
-    "oclif", "ktools", "build", "lint", "format", "release", "test", "tools"
+    "oclif",
+    "ktools",
+    "build",
+    "lint",
+    "format",
+    "release",
+    "test",
+    "tools"
   ],
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "directories": {
+    "test": "test"
+  }
 }

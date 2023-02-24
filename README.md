@@ -65,7 +65,7 @@ EXAMPLES
   $ ktools build
 ```
 
-_See code: [dist/commands/build/index.js](https://github.com/kuritkaj/hello-world/blob/v0.0.1/dist/commands/build/index.js)_
+_See code: [dist/commands/build/index.js](https://github.com/kuritkaj/ktools/blob/v0.0.1/dist/commands/build/index.js)_
 
 ## `ktools dev`
 
@@ -86,7 +86,7 @@ EXAMPLES
   $ ktools dev
 ```
 
-_See code: [dist/commands/dev/index.js](https://github.com/kuritkaj/hello-world/blob/v0.0.1/dist/commands/dev/index.js)_
+_See code: [dist/commands/dev/index.js](https://github.com/kuritkaj/ktools/blob/v0.0.1/dist/commands/dev/index.js)_
 
 ## `ktools format`
 
@@ -107,7 +107,7 @@ EXAMPLES
   $ ktools format
 ```
 
-_See code: [dist/commands/format/index.js](https://github.com/kuritkaj/hello-world/blob/v0.0.1/dist/commands/format/index.js)_
+_See code: [dist/commands/format/index.js](https://github.com/kuritkaj/ktools/blob/v0.0.1/dist/commands/format/index.js)_
 
 ## `ktools help [COMMANDS]`
 
@@ -148,7 +148,7 @@ EXAMPLES
   $ ktools lint
 ```
 
-_See code: [dist/commands/lint/index.js](https://github.com/kuritkaj/hello-world/blob/v0.0.1/dist/commands/lint/index.js)_
+_See code: [dist/commands/lint/index.js](https://github.com/kuritkaj/ktools/blob/v0.0.1/dist/commands/lint/index.js)_
 
 ## `ktools plugins`
 
@@ -402,7 +402,7 @@ EXAMPLES
   $ ktools preview
 ```
 
-_See code: [dist/commands/preview/index.js](https://github.com/kuritkaj/hello-world/blob/v0.0.1/dist/commands/preview/index.js)_
+_See code: [dist/commands/preview/index.js](https://github.com/kuritkaj/ktools/blob/v0.0.1/dist/commands/preview/index.js)_
 
 ## `ktools release`
 
@@ -423,5 +423,5 @@ EXAMPLES
   $ ktools release
 ```
 
-_See code: [dist/commands/release/index.js](https://github.com/kuritkaj/hello-world/blob/v0.0.1/dist/commands/release/index.js)_
+_See code: [dist/commands/release/index.js](https://github.com/kuritkaj/ktools/blob/v0.0.1/dist/commands/release/index.js)_
 <!-- commandsstop -->
