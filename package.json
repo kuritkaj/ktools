@@ -19,7 +19,7 @@
   "main": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kuritkaj/ktools.git"
+    "url": "ssh://git@github.com/kuritkaj/ktools.git"
   },
   "files": [
     "/bin",
@@ -37,6 +37,7 @@
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/gitlab": "^10.1.4",
     "@semantic-release/npm": "^9.0.2",
+    "conventional-changelog-conventionalcommits": "^5.0.0",
     "cosmiconfig": "^8.0.0",
     "execa": "^6.1.0",
     "fs-jetpack": "^5.1.0",
