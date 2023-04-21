@@ -1,7 +1,7 @@
-import { WorkflowPresetRepository } from "../lib/workflow/WorkflowPresetRepository.js";
+import { WorkflowPresetRepository } from "../flow/WorkflowPresetRepository.js";
 import { presets } from "../presets/presets.js";
 import { ConfigProvider } from "./ConfigProvider.js";
-import { WorkflowPresetRunner } from "../lib/workflow/WorkflowPresetRunner.js";
+import { WorkflowPresetRunner } from "../flow/WorkflowPresetRunner.js";
 import { TaskRunner } from "../lib/task/TaskRunner.js";
 import { StageRunner } from "./StageRunner.js";
 

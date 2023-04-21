@@ -2,8 +2,8 @@ import fs from "node:fs";
 import { join as pathJoin, resolve as pathResolve } from "node:path";
 import { LocationResolver } from "./LocationResolver.js";
 
-export type FSLocationPath = string;
-export type FSLocationPathList = FSLocationPath[];
+export type FSPath = string;
+export type FSPathList = FSPath[];
 
 interface FSLocationConfig {
   root?: FSLocation;
@@ -14,14 +14,11 @@ export class FSLocation {
   root?: FSLocation;
   parent?: FSLocation;
 
-  relativePath: FSLocationPath;
-  relativePathRoot: FSLocationPath;
-  absolutePath: FSLocationPath;
+  relativePath: FSPath;
+  relativePathRoot: FSPath;
+  absolutePath: FSPath;
   locationResolver = new LocationResolver();
-  constructor(
-    protected readonly path: FSLocationPath,
-    config: FSLocationConfig = {},
-  ) {
+  constructor(protected readonly path: FSPath, config: FSLocationConfig = {}) {
     this.root = config.root;
     this.parent = config.parent || this.root;
 
@@ -44,22 +41,22 @@ export class FSLocation {
     );
   }
 
-  getParentAbsolutePath(): FSLocationPath {
+  getParentAbsolutePath(): FSPath {
     return (this.parent || this).absolutePath;
   }
 
-  getRootAbsolutePath(): FSLocationPath {
+  getRootAbsolutePath(): FSPath {
     return (this.root || this).absolutePath;
   }
 
-  join(...paths: FSLocationPathList): FSLocation {
+  join(...paths: FSPathList): FSLocation {
     return new FSLocation(pathJoin(...paths), {
       root: this.root || this,
       parent: this,
     });
   }
 
-  resolve(...paths: FSLocationPathList): FSLocation {
+  resolve(...paths: FSPathList): FSLocation {
     return new FSLocation(pathResolve(...paths), {
       root: this.root || this,
       parent: this,

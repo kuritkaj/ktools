@@ -2,8 +2,8 @@ import { Flags } from "@oclif/core";
 import { BaseCommand } from "../../command/BaseCommand.js";
 import { WorkflowStageName } from "../../flow/WorkflowStages.js";
 
-export default class BuildStage extends BaseCommand<typeof BuildStage> {
-  static description = "Build sources action";
+export default class GenerateStage extends BaseCommand<typeof GenerateStage> {
+  static description = "Generate sources action";
 
   static examples = ["<%= config.bin %> <%= command.id %>"];
 
@@ -12,6 +12,6 @@ export default class BuildStage extends BaseCommand<typeof BuildStage> {
   };
 
   public async run() {
-    await this.presetRunner.runStage(WorkflowStageName.Build);
+    await this.presetRunner.runStage(WorkflowStageName.Generate);
   }
 }

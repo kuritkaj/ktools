@@ -1,4 +1,4 @@
-import { WorkflowPreset } from "../../lib/workflow/WorkflowStages.js";
+import { WorkflowPreset } from "../../flow/WorkflowStages.js";
 import { ReleaseInit } from "./ReleaseInit.js";
 import { Release } from "./Release.js";
 

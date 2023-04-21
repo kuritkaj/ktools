@@ -1,8 +1,8 @@
 import { execa } from "execa";
 import { NpmProvider } from "../context/NpmProvider.js";
-import { TaskRunner } from "./task/TaskRunner.js";
+import { TaskRunner } from "../lib/task/TaskRunner.js";
 import path from "node:path";
-import { Task, TaskContext } from "./task/Task.js";
+import { Task, TaskContext } from "../lib/task/Task.js";
 
 export type ProgramArgs = readonly string[];
 
@@ -67,7 +67,7 @@ export class ProgramRunner {
                 {
                   title: "Run tool with NPX",
                   enabled: () => !ctx.toolPath,
-                  ...this.getRunTask("npx", [tool, ...args]),
+                  ...this.getRunTask("npx", ["-y", tool, ...args]),
                 },
               ]),
           },

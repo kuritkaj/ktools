@@ -1,7 +1,7 @@
 import { Context } from "../../context/context.js";
 import { Task, TaskList } from "../../lib/task/Task.js";
-import { WorkflowStage } from "../../lib/workflow/WorkflowStage.js";
-import { ProgramArgs } from "../../lib/ProgramRunner.js";
+import { WorkflowStage } from "../../flow/WorkflowStage.js";
+import { ProgramArgs } from "../../task/ProgramRunner.js";
 
 export class RomeBase extends WorkflowStage {
   run(): TaskList {

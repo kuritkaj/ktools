@@ -1,5 +1,5 @@
 import { ViteBuild } from "./ViteBuild.js";
-import { WorkflowPreset } from "../../lib/workflow/WorkflowStages.js";
+import { WorkflowPreset } from "../../flow/WorkflowStages.js";
 import { ViteDev } from "./ViteDev.js";
 import { VitePreview } from "./VitePreview.js";
 import { ViteInit } from "./ViteInit.js";

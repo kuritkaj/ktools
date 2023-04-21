@@ -3,6 +3,7 @@ import { Context } from "../context/context.js";
 import { ConfigFlag } from "../flag/config.js";
 import { InferredFlags } from "@oclif/core/lib/interfaces";
 import { InferredArgs } from "@oclif/core/lib/interfaces/args";
+import { WorkflowStageName } from "../flow/WorkflowStages.js";
 
 export type Flags<T extends typeof Command> = InferredFlags<
   typeof BaseCommand["baseFlags"] & T["flags"]
@@ -36,6 +37,6 @@ export abstract class BaseCommand<T extends typeof Command> extends Command {
   async init() {
     await super.init();
 
-    await this.presetRunner.runStage("init");
+    await this.presetRunner.runStage(WorkflowStageName.Init);
   }
 }

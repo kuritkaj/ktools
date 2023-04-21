@@ -1,6 +1,6 @@
 import { Context } from "../../context/context.js";
 import { TaskList } from "../../lib/task/Task.js";
-import { WorkflowStage } from "../../lib/workflow/WorkflowStage.js";
+import { WorkflowStage } from "../../flow/WorkflowStage.js";
 
 export class Release extends WorkflowStage {
   run(): TaskList {

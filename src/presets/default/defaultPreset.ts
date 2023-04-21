@@ -1,4 +1,4 @@
-import { WorkflowPreset } from "../../lib/workflow/WorkflowStages.js";
+import { WorkflowPreset } from "../../flow/WorkflowStages.js";
 import { HandleConfig } from "./HandleConfig.js";
 
 export const defaultPreset = new WorkflowPreset("Default", {

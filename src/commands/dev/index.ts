@@ -1,6 +1,6 @@
 import { Flags } from "@oclif/core";
 import { BaseCommand } from "../../command/BaseCommand.js";
-import { WorkflowStageName } from "../../lib/workflow/WorkflowStages.js";
+import { WorkflowStageName } from "../../flow/WorkflowStages.js";
 
 export default class DevStage extends BaseCommand<typeof DevStage> {
   static description = "Run dev server";

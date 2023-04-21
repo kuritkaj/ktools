@@ -1,4 +1,4 @@
-import { WorkflowPreset } from "../../lib/workflow/WorkflowStages.js";
+import { WorkflowPreset } from "../../flow/WorkflowStages.js";
 import { RomeFormat } from "./RomeFormat.js";
 import { RomeInit } from "./RomeInit.js";
 import { RomeLint } from "./RomeLint.js";
