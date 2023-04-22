@@ -20,7 +20,7 @@ $ npm install -g @kuritkaj/ktools
 $ ktools COMMAND
 running command...
 $ ktools (--version)
-@kuritkaj/ktools/1.3.0 linux-x64 node-v19.6.0
+@kuritkaj/ktools/1.4.0 linux-x64 node-v20.0.0
 $ ktools --help [COMMAND]
 USAGE
   $ ktools COMMAND
@@ -65,7 +65,7 @@ EXAMPLES
   $ ktools build
 ```
 
-_See code: [dist/commands/build/index.js](https://github.com/kuritkaj/ktools/blob/v1.3.0/dist/commands/build/index.js)_
+_See code: [dist/commands/build/index.js](https://github.com/kuritkaj/ktools/blob/v1.4.0/dist/commands/build/index.js)_
 
 ## `ktools dev`
 
@@ -86,7 +86,7 @@ EXAMPLES
   $ ktools dev
 ```
 
-_See code: [dist/commands/dev/index.js](https://github.com/kuritkaj/ktools/blob/v1.3.0/dist/commands/dev/index.js)_
+_See code: [dist/commands/dev/index.js](https://github.com/kuritkaj/ktools/blob/v1.4.0/dist/commands/dev/index.js)_
 
 ## `ktools format`
 
@@ -107,7 +107,7 @@ EXAMPLES
   $ ktools format
 ```
 
-_See code: [dist/commands/format/index.js](https://github.com/kuritkaj/ktools/blob/v1.3.0/dist/commands/format/index.js)_
+_See code: [dist/commands/format/index.js](https://github.com/kuritkaj/ktools/blob/v1.4.0/dist/commands/format/index.js)_
 
 ## `ktools help [COMMANDS]`
 
@@ -127,7 +127,7 @@ DESCRIPTION
   Display help for ktools.
 ```
 
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v5.2.4/src/commands/help.ts)_
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v5.2.9/src/commands/help.ts)_
 
 ## `ktools lint`
 
@@ -148,7 +148,7 @@ EXAMPLES
   $ ktools lint
 ```
 
-_See code: [dist/commands/lint/index.js](https://github.com/kuritkaj/ktools/blob/v1.3.0/dist/commands/lint/index.js)_
+_See code: [dist/commands/lint/index.js](https://github.com/kuritkaj/ktools/blob/v1.4.0/dist/commands/lint/index.js)_
 
 ## `ktools plugins`
 
@@ -168,7 +168,7 @@ EXAMPLES
   $ ktools plugins
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v2.3.2/src/commands/plugins/index.ts)_
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v2.4.7/src/commands/plugins/index.ts)_
 
 ## `ktools plugins:install PLUGIN...`
 
@@ -402,7 +402,7 @@ EXAMPLES
   $ ktools preview
 ```
 
-_See code: [dist/commands/preview/index.js](https://github.com/kuritkaj/ktools/blob/v1.3.0/dist/commands/preview/index.js)_
+_See code: [dist/commands/preview/index.js](https://github.com/kuritkaj/ktools/blob/v1.4.0/dist/commands/preview/index.js)_
 
 ## `ktools release`
 
@@ -423,5 +423,5 @@ EXAMPLES
   $ ktools release
 ```
 
-_See code: [dist/commands/release/index.js](https://github.com/kuritkaj/ktools/blob/v1.3.0/dist/commands/release/index.js)_
+_See code: [dist/commands/release/index.js](https://github.com/kuritkaj/ktools/blob/v1.4.0/dist/commands/release/index.js)_
 <!-- commandsstop -->
