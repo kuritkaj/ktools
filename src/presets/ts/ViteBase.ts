@@ -2,7 +2,7 @@ import { Context } from "../../context/context.js";
 import { Task, TaskList } from "../../lib/task/Task.js";
 import { WorkflowStage } from "../../lib/workflow/WorkflowStage.js";
 
-export const enum ViteConfigFile {
+export enum ViteConfigFile {
   build = "vite.ts.lib.js",
   dev = "vite.ts.js",
 }
