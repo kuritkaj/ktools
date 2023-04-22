@@ -1,8 +1,8 @@
-import { execa } from "execa";
 import { NpmProvider } from "../context/NpmProvider.js";
-import { TaskRunner } from "./task/TaskRunner.js";
-import path from "node:path";
 import { Task, TaskContext } from "./task/Task.js";
+import { TaskRunner } from "./task/TaskRunner.js";
+import { execa } from "execa";
+import path from "node:path";
 
 export type ProgramArgs = readonly string[];
 

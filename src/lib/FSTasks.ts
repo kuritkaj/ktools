@@ -1,6 +1,6 @@
-import jetpack from "fs-jetpack";
 import { ContextProvider } from "../context/ContextProvider.js";
 import { Task } from "./task/Task.js";
+import jetpack from "fs-jetpack";
 
 export class FSTasks {
   constructor(protected context: ContextProvider) {}

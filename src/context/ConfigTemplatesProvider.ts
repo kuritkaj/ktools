@@ -1,6 +1,6 @@
-import { ContextProvider } from "./ContextProvider.js";
-import { LocationPath, LocationPathList } from "../lib/fs/LocationResolver.js";
 import { FSLocation } from "../lib/fs/Location";
+import { LocationPath, LocationPathList } from "../lib/fs/LocationResolver.js";
+import { ContextProvider } from "./ContextProvider.js";
 
 export class ConfigTemplatesProvider {
   constructor(protected context: ContextProvider) {}

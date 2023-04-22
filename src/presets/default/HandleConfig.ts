@@ -1,6 +1,6 @@
-import { WorkflowStage } from "../../lib/workflow/WorkflowStage.js";
-import { createTaskGroup, TaskList } from "../../lib/task/Task.js";
 import { Context } from "../../context/context.js";
+import { TaskList, createTaskGroup } from "../../lib/task/Task.js";
+import { WorkflowStage } from "../../lib/workflow/WorkflowStage.js";
 
 export class HandleConfig extends WorkflowStage {
   run(): TaskList {

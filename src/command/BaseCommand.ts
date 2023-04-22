@@ -1,6 +1,6 @@
-import { Args, Command, Flags } from "@oclif/core";
 import { Context } from "../context/context.js";
 import { ConfigFlag } from "../flag/config.js";
+import { Args, Command, Flags } from "@oclif/core";
 import { InferredFlags } from "@oclif/core/lib/interfaces";
 import { InferredArgs } from "@oclif/core/lib/interfaces/args";
 

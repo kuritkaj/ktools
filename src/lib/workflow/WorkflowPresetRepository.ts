@@ -10,7 +10,7 @@ export class WorkflowPresetRepository {
     return presetNames.reduce<WorkflowPresetList>((acc, name) => {
       const preset = this.presets[name];
 
-      if (preset && preset.hasStage(stageName)) {
+      if (preset?.hasStage(stageName)) {
         acc.push(preset);
       }
 

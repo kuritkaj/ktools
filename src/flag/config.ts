@@ -1,6 +1,6 @@
-import { Flags } from "@oclif/core";
 import { Context } from "../context/context.js";
 import { LocationPath, LocationPathList } from "../lib/fs/LocationResolver.js";
+import { Flags } from "@oclif/core";
 import { FlagProps, OptionFlag } from "@oclif/core/lib/interfaces/parser";
 
 type ConfigFlagOptions = {

@@ -1,8 +1,8 @@
-import { ViteBuild } from "./ViteBuild.js";
 import { WorkflowPreset } from "../../lib/workflow/WorkflowStages.js";
+import { ViteBuild } from "./ViteBuild.js";
 import { ViteDev } from "./ViteDev.js";
-import { VitePreview } from "./VitePreview.js";
 import { ViteInit } from "./ViteInit.js";
+import { VitePreview } from "./VitePreview.js";
 
 export const tsPreset = new WorkflowPreset("TS", {
   init: [new ViteInit()],
