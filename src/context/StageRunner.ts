@@ -1,5 +1,5 @@
-import { ConfigProvider } from "./ConfigProvider.js";
 import { WorkflowPresetRunner } from "../lib/workflow/WorkflowPresetRunner.js";
+import { ConfigProvider } from "./ConfigProvider.js";
 
 export class StageRunner {
   protected enabledPresets: string[];

@@ -1,6 +1,6 @@
-import { Flags } from "@oclif/core";
 import { BaseCommand } from "../../command/BaseCommand.js";
 import { WorkflowStageName } from "../../lib/workflow/WorkflowStages.js";
+import { Flags } from "@oclif/core";
 
 export default class BuildStage extends BaseCommand<typeof BuildStage> {
   static description = "Build sources action";

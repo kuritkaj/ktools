@@ -1,7 +1,7 @@
 import { WorkflowContext, WorkflowStageList } from "./WorkflowStage.js";
 import { StagePreset } from "./stage/StagePreset.js";
 
-export const enum WorkflowStageName {
+export enum WorkflowStageName {
   Init = "init",
   Build = "build",
   Dev = "dev",

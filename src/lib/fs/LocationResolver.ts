@@ -1,10 +1,10 @@
 import fs from "node:fs";
 import {
-  join as pathJoin,
-  resolve as pathResolve,
-  relative as pathResolveRelative,
-  parse as pathParse,
   isAbsolute,
+  join as pathJoin,
+  parse as pathParse,
+  relative as pathResolveRelative,
+  resolve as pathResolve,
 } from "node:path";
 import { ParsedPath } from "path";
 

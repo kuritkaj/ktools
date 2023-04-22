@@ -1,5 +1,5 @@
-import { StageAction } from "./stage/StageAction.js";
 import { TaskList } from "../task/Task.js";
+import { StageAction } from "./stage/StageAction.js";
 
 export type WorkflowContext = any;
 export type WorkflowStageList = WorkflowStage[];
