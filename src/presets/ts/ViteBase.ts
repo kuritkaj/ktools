@@ -16,11 +16,15 @@ export class ViteBase extends WorkflowStage {
 
   protected runViteTask(taskName: string): Task {
     const configFile = this.getConfingPath();
-    return Context.program.getRunNpmToolTask("vite", [
-      taskName,
-      "-c",
-      configFile || "",
-    ]);
+
+    const viteArgs = [taskName];
+
+    if (configFile) {
+      viteArgs.push("-c");
+      viteArgs.push(configFile);
+    }
+
+    return Context.program.getRunNpmToolTask("vite", viteArgs);
   }
 
   protected getConfingPath(): string {

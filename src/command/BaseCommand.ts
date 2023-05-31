@@ -1,6 +1,7 @@
 import { Context } from "../context/context.js";
 import { ConfigFlag } from "../flag/config.js";
-import { Args, Command, Flags } from "@oclif/core";
+import { WorkflowStageName } from "../lib/workflow/WorkflowStages.js";
+import { Command } from "@oclif/core";
 import { InferredFlags } from "@oclif/core/lib/interfaces";
 import { InferredArgs } from "@oclif/core/lib/interfaces/args";
 
@@ -36,6 +37,6 @@ export abstract class BaseCommand<T extends typeof Command> extends Command {
   async init() {
     await super.init();
 
-    await this.presetRunner.runStage("init");
+    await this.presetRunner.runStage(WorkflowStageName.Init);
   }
 }

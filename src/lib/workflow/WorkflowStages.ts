@@ -15,11 +15,7 @@ export type WorkflowStagePreset = {
   [K in WorkflowStageName]?: WorkflowStageList;
 };
 
-export class WorkflowPreset extends StagePreset<WorkflowContext> {
-  constructor(name: string, preset: WorkflowStagePreset) {
-    super(name, preset);
-  }
-}
+export class WorkflowPreset extends StagePreset<WorkflowContext> {}
 
 export type WorkflowPresetList = WorkflowPreset[];
 
