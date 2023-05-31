@@ -7,7 +7,7 @@ export class HandleConfig extends WorkflowStage {
     const { context } = Context;
 
     return [
-      createTaskGroup("Check Config", (groupCtx, groupTask) => {
+      createTaskGroup("Check Config", () => {
         return [
           Context.fs.projectPathExists(context.tools.config.fileName),
           {
