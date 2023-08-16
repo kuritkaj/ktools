@@ -51,22 +51,22 @@ export class ProgramRunner {
         task.newListr<RunNpmToolTaskCtx>([
           {
             title: "Find tool location",
-            task: (ctx, t) => {
-              ctx.toolPath = this.npmProvider.getNpmToolLocation(tool);
+            task: (ctx2, t) => {
+              ctx2.toolPath = this.npmProvider.getNpmToolLocation(tool);
               t.title = `${t.title}: ${ctx.toolPath}`;
             },
           },
           {
-            task: (ctx, subTask) =>
+            task: (ctx2, subTask) =>
               subTask.newListr([
                 {
                   title: "Run tool",
-                  enabled: () => !!ctx.toolPath,
-                  ...this.getRunTask(ctx.toolPath, args),
+                  enabled: () => !!ctx2.toolPath,
+                  ...this.getRunTask(ctx2.toolPath, args),
                 },
                 {
                   title: "Run tool with NPX",
-                  enabled: () => !ctx.toolPath,
+                  enabled: () => !ctx2.toolPath,
                   ...this.getRunTask("npx", [tool, ...args]),
                 },
               ]),
