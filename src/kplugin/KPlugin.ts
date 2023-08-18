@@ -1,7 +1,7 @@
 import { GenericPlugin, PluginConfig } from "../lib/plugin/Plugin.js";
 import { ContextProvider } from "../context/ContextProvider.js";
 
-export const enum KPluginAction {
+export enum KPluginAction {
   Init = "init",
   Generate = "generate",
   Build = "build",

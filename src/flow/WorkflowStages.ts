@@ -1,7 +1,7 @@
 import { WorkflowContext } from "./WorkflowStage.js";
 import { ActionGroup, ActionGroupPure } from "../lib/flow/ActionGroup.js";
 
-export const enum WorkflowStageName {
+export enum WorkflowStageName {
   Init = "init",
   Generate = "generate",
   Build = "build",
