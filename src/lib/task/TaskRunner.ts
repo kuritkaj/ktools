@@ -1,5 +1,5 @@
+import { TaskContext, TaskList, TaskWrapper, createTaskGroup } from "./Task.js";
 import { Listr } from "listr2";
-import { createTaskGroup, TaskContext, TaskList, TaskWrapper } from "./Task.js";
 
 export class TaskRunner {
   run<Ctx = TaskContext>(tasks: TaskList<Ctx>, ctx?: Ctx): Promise<Ctx> {

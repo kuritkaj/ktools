@@ -51,13 +51,13 @@ export class ProgramRunner {
         task.newListr<RunNpmToolTaskCtx>([
           {
             title: "Find tool location",
-            task: (ctx, t) => {
+            task: (ctx2, t) => {
               ctx.toolPath = this.npmProvider.getNpmToolLocation(tool);
               t.title = `${t.title}: ${ctx.toolPath}`;
             },
           },
           {
-            task: (ctx, subTask) =>
+            task: (ctx2, subTask) =>
               subTask.newListr([
                 {
                   title: "Run tool",

@@ -1,6 +1,6 @@
+import { LocationResolver } from "./LocationResolver.js";
 import fs from "node:fs";
 import { join as pathJoin, resolve as pathResolve } from "node:path";
-import { LocationResolver } from "./LocationResolver.js";
 
 export type FSPath = string;
 export type FSPathList = FSPath[];
