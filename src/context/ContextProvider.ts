@@ -16,6 +16,7 @@ export class ContextProvider {
   };
   project: {
     templatesPath: FSLocation;
+    ignoreFile: FSLocation;
     distPath: FSLocation;
     testPath: FSLocation;
     srcPath: FSLocation;
@@ -43,6 +44,7 @@ export class ContextProvider {
 
     this.project = {
       rootPath: projectRootLocation,
+      ignoreFile: projectRootLocation.join(".gitignore"),
       srcPath: projectRootLocation.join("src"),
       distPath: projectRootLocation.join("dist"),
       testPath: projectRootLocation.join("test"),

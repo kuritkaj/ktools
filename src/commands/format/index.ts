@@ -1,6 +1,6 @@
-import { BaseCommand } from "../../command/BaseCommand.js";
-import { WorkflowStageName } from "../../lib/workflow/WorkflowStages.js";
 import { Flags } from "@oclif/core";
+import { BaseCommand } from "../../command/BaseCommand.js";
+import { WorkflowStageName } from "../../flow/WorkflowStages.js";
 
 export default class FormatStage extends BaseCommand<typeof FormatStage> {
   static description = "Format sources";

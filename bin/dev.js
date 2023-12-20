@@ -8,7 +8,7 @@ import url from 'node:url'
 // eslint-disable-next-line node/no-unpublished-import
 import {register} from 'ts-node'
 
-// In dev mode -> use ts-node and dev plugins
+// In dev mode -> use ts-node and dev plugins 
 process.env.NODE_ENV = 'development'
 
 register({
@@ -18,7 +18,7 @@ register({
 // In dev mode, always show stack traces
 oclif.settings.debug = true
 
-// Start the CLI
+// Start the CLI and rock
 oclif
   .run(process.argv.slice(2), import.meta.url)
   .then(oclif.flush)

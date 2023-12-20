@@ -1,5 +1,6 @@
-import { WorkflowPresetRunner } from "../lib/workflow/WorkflowPresetRunner.js";
 import { ConfigProvider } from "./ConfigProvider.js";
+import { WorkflowPresetRunner } from "../flow/WorkflowPresetRunner.js";
+import { WorkflowStageName } from "../flow/WorkflowStages.js";
 
 export class StageRunner {
   protected enabledPresets: string[];
@@ -10,7 +11,7 @@ export class StageRunner {
     this.enabledPresets = this.config.getConfig().presets;
   }
 
-  runStage(name: string) {
+  async runStage(name: WorkflowStageName) {
     return this.workflowRunner.run(this.enabledPresets, name);
   }
 }

@@ -1,8 +1,8 @@
-import { NpmProvider } from "../context/NpmProvider.js";
-import { Task, TaskContext } from "./task/Task.js";
-import { TaskRunner } from "./task/TaskRunner.js";
 import { execa } from "execa";
+import { NpmProvider } from "../context/NpmProvider.js";
+import { TaskRunner } from "../lib/task/TaskRunner.js";
 import path from "node:path";
+import { Task, TaskContext } from "../lib/task/Task.js";
 
 export type ProgramArgs = readonly string[];
 
@@ -51,13 +51,13 @@ export class ProgramRunner {
         task.newListr<RunNpmToolTaskCtx>([
           {
             title: "Find tool location",
-            task: (ctx, t) => {
+            task: (ctx2, t) => {
               ctx.toolPath = this.npmProvider.getNpmToolLocation(tool);
               t.title = `${t.title}: ${ctx.toolPath}`;
             },
           },
           {
-            task: (ctx, subTask) =>
+            task: (ctx2, subTask) =>
               subTask.newListr([
                 {
                   title: "Run tool",
@@ -67,7 +67,7 @@ export class ProgramRunner {
                 {
                   title: "Run tool with NPX",
                   enabled: () => !ctx.toolPath,
-                  ...this.getRunTask("npx", [tool, ...args]),
+                  ...this.getRunTask("npx", ["-y", tool, ...args]),
                 },
               ]),
           },

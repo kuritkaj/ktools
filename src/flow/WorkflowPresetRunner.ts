@@ -1,8 +1,12 @@
-import { Task, createTaskGroup } from "../task/Task.js";
-import { TaskRunner } from "../task/TaskRunner.js";
+import { TaskRunner } from "../lib/task/TaskRunner.js";
 import { WorkflowPresetRepository } from "./WorkflowPresetRepository.js";
 import { WorkflowContext, WorkflowStage } from "./WorkflowStage.js";
-import { WorkflowPreset, WorkflowPresetList } from "./WorkflowStages.js";
+import {
+  WorkflowPreset,
+  WorkflowPresetList,
+  WorkflowStageName,
+} from "./WorkflowStages.js";
+import { createTaskGroup, Task } from "../lib/task/Task.js";
 
 export class WorkflowPresetRunner {
   constructor(
@@ -11,7 +15,7 @@ export class WorkflowPresetRunner {
   ) {}
   async run(
     presetNames: string[],
-    stageName: string,
+    stageName: WorkflowStageName,
     ctx?: WorkflowContext,
   ): Promise<void> {
     const presets = this.presets.getPresetsWithStage(presetNames, stageName);
@@ -21,7 +25,7 @@ export class WorkflowPresetRunner {
 
   async runStageOnPresets(
     presets: WorkflowPresetList,
-    stageName: string,
+    stageName: WorkflowStageName,
     ctx?: WorkflowContext,
   ): Promise<void> {
     const tsk = presets.map((preset) => {
@@ -33,10 +37,10 @@ export class WorkflowPresetRunner {
 
   mapPresetToTask(
     preset: WorkflowPreset,
-    stageName: string,
+    stageName: WorkflowStageName,
     ctx?: WorkflowContext,
   ): Task {
-    const stages = preset.getActionsForStage(stageName) || [];
+    const stages = preset.getActions(stageName) || [];
 
     return createTaskGroup(`${preset.name}`, () =>
       stages.map((stage) => {
