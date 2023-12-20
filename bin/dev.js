@@ -18,7 +18,7 @@ register({
 // In dev mode, always show stack traces
 oclif.settings.debug = true
 
-// Start the CLI
+// Start the CLI and rock
 oclif
   .run(process.argv.slice(2), import.meta.url)
   .then(oclif.flush)
